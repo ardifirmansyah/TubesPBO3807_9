@@ -86,7 +86,10 @@ public class Launcher extends javax.swing.JFrame {
 
     private void btnPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPetugasActionPerformed
         // TODO add your handling code here:
-        
+        LoginPetugas formLoginPetugas = new LoginPetugas();
+        formLoginPetugas.setLocationRelativeTo(this);
+        formLoginPetugas.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnPetugasActionPerformed
 
     /**

@@ -16,7 +16,8 @@ public class AplikasiPeminjamanBarang {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hello");
-    }
-    
+        Launcher launcher = new Launcher();
+        launcher.setLocationRelativeTo(null);
+        launcher.setVisible(true);
+    }    
 }
