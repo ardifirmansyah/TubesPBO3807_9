@@ -46,8 +46,10 @@ public class LoginPetugas extends javax.swing.JFrame {
             }
         });
 
+        usernameLabel.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         usernameLabel.setText("Username");
 
+        passwordLabel.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         passwordLabel.setText("Password");
 
         password.addActionListener(new java.awt.event.ActionListener() {
