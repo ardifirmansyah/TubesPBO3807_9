@@ -10,7 +10,6 @@ package aplikasipeminjamanbarang;
  * @author ardifirmansyah
  */
 public class LoginPetugas extends javax.swing.JFrame {
-
     /**
      * Creates new form LoginPetugas
      */
@@ -28,11 +27,11 @@ public class LoginPetugas extends javax.swing.JFrame {
     private void initComponents() {
 
         title = new javax.swing.JLabel();
-        username = new javax.swing.JTextField();
+        usernameTxt = new javax.swing.JTextField();
         usernameLabel = new javax.swing.JLabel();
         passwordLabel = new javax.swing.JLabel();
-        password = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        passwordTxt = new javax.swing.JPasswordField();
+        loginBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,9 +39,9 @@ public class LoginPetugas extends javax.swing.JFrame {
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("Masukkan Data Login");
 
-        username.addActionListener(new java.awt.event.ActionListener() {
+        usernameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameActionPerformed(evt);
+                usernameTxtActionPerformed(evt);
             }
         });
 
@@ -52,21 +51,21 @@ public class LoginPetugas extends javax.swing.JFrame {
         passwordLabel.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         passwordLabel.setText("Password");
 
-        password.addActionListener(new java.awt.event.ActionListener() {
+        passwordTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
+                passwordTxtActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Login");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        loginBtn.setText("Login");
+        loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                loginBtnMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        loginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                loginBtnActionPerformed(evt);
             }
         });
 
@@ -77,7 +76,7 @@ public class LoginPetugas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
+                    .addComponent(loginBtn)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
@@ -86,8 +85,8 @@ public class LoginPetugas extends javax.swing.JFrame {
                                 .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                                .addComponent(password)))))
+                                .addComponent(usernameTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                                .addComponent(passwordTxt)))))
                 .addGap(0, 94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -97,36 +96,50 @@ public class LoginPetugas extends javax.swing.JFrame {
                 .addComponent(title)
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(usernameLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordLabel)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(loginBtn)
                 .addContainerGap(117, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+    private void usernameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTxtActionPerformed
         // TODO add your handling code here:
+    }//GEN-LAST:event_usernameTxtActionPerformed
+
+    private void passwordTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordTxtActionPerformed
+
+    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
+        // TODO add your handling code here:
+        String username = "admin";
+        String password = "admin";
         
-    }//GEN-LAST:event_usernameActionPerformed
+        if (username.equals(usernameTxt.getText()) && password.equals(passwordTxt.getText())) {
+            this.setVisible(false);
+            Launcher l = new Launcher();    //ganti dengan form admin
+            l.setLocationRelativeTo(null);
+            l.setVisible(true);
+        }
+        else {
+            javax.swing.JOptionPane.showMessageDialog(null, "Maaf user atau password anda salah.");
+            usernameTxt.setText("");
+            passwordTxt.setText("");
+            usernameTxt.requestFocus();
+        }
+    }//GEN-LAST:event_loginBtnActionPerformed
 
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_loginBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -164,11 +177,11 @@ public class LoginPetugas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPasswordField password;
+    private javax.swing.JButton loginBtn;
     private javax.swing.JLabel passwordLabel;
+    private javax.swing.JPasswordField passwordTxt;
     private javax.swing.JLabel title;
-    private javax.swing.JTextField username;
     private javax.swing.JLabel usernameLabel;
+    private javax.swing.JTextField usernameTxt;
     // End of variables declaration//GEN-END:variables
 }
