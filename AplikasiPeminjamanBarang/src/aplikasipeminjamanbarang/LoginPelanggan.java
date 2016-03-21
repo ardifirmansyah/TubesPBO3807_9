@@ -9,11 +9,12 @@ package aplikasipeminjamanbarang;
  *
  * @author ardifirmansyah
  */
-public class LoginPetugas extends javax.swing.JFrame {
+public class LoginPelanggan extends javax.swing.JFrame {
+
     /**
-     * Creates new form LoginPetugas
+     * Creates new form LoginPelanggan
      */
-    public LoginPetugas() {
+    public LoginPelanggan() {
         initComponents();
     }
 
@@ -26,25 +27,15 @@ public class LoginPetugas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        title = new javax.swing.JLabel();
-        usernameTxt = new javax.swing.JTextField();
         usernameLabel = new javax.swing.JLabel();
         passwordLabel = new javax.swing.JLabel();
         passwordTxt = new javax.swing.JPasswordField();
+        usernameTxt = new javax.swing.JTextField();
+        title = new javax.swing.JLabel();
         loginBtn = new javax.swing.JButton();
         title1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        title.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
-        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title.setText("Masukkan Data Login");
-
-        usernameTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usernameTxtActionPerformed(evt);
-            }
-        });
 
         usernameLabel.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
         usernameLabel.setText("Username");
@@ -57,6 +48,16 @@ public class LoginPetugas extends javax.swing.JFrame {
                 passwordTxtActionPerformed(evt);
             }
         });
+
+        usernameTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTxtActionPerformed(evt);
+            }
+        });
+
+        title.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("Masukkan Data Login");
 
         loginBtn.setText("Login");
         loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -72,7 +73,7 @@ public class LoginPetugas extends javax.swing.JFrame {
 
         title1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         title1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title1.setText("Petugas");
+        title1.setText("Pelanggan");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,19 +119,23 @@ public class LoginPetugas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void passwordTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordTxtActionPerformed
+
     private void usernameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameTxtActionPerformed
 
-    private void passwordTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTxtActionPerformed
+    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTxtActionPerformed
+    }//GEN-LAST:event_loginBtnMouseClicked
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
         String username = "admin";
         String password = "admin";
-        
+
         if (username.equals(usernameTxt.getText()) && password.equals(passwordTxt.getText())) {
             this.setVisible(false);
             Launcher l = new Launcher();    //ganti dengan form admin
@@ -144,10 +149,6 @@ public class LoginPetugas extends javax.swing.JFrame {
             usernameTxt.requestFocus();
         }
     }//GEN-LAST:event_loginBtnActionPerformed
-
-    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -166,20 +167,20 @@ public class LoginPetugas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPelanggan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPelanggan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPelanggan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginPelanggan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginPetugas().setVisible(true);
+                new LoginPelanggan().setVisible(true);
             }
         });
     }

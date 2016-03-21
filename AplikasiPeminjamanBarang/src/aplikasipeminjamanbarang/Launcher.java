@@ -45,6 +45,11 @@ public class Launcher extends javax.swing.JFrame {
         });
 
         btnPelanggan.setText("PELANGGAN");
+        btnPelanggan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPelangganActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         jLabel1.setText("Pilih masuk sebagai :");
@@ -91,6 +96,14 @@ public class Launcher extends javax.swing.JFrame {
         formLoginPetugas.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnPetugasActionPerformed
+
+    private void btnPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPelangganActionPerformed
+        // TODO add your handling code here:
+        LoginPelanggan formLoginPelanggan = new LoginPelanggan();
+        formLoginPelanggan.setLocationRelativeTo(this);
+        formLoginPelanggan.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnPelangganActionPerformed
 
     /**
      * @param args the command line arguments
