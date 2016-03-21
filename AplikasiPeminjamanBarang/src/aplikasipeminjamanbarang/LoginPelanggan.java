@@ -133,12 +133,12 @@ public class LoginPelanggan extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-        String username = "admin";
-        String password = "admin";
+        String username = "pelanggan";
+        String password = "pelanggan";
 
         if (username.equals(usernameTxt.getText()) && password.equals(passwordTxt.getText())) {
             this.setVisible(false);
-            Launcher l = new Launcher();    //ganti dengan form admin
+            Launcher l = new Launcher();    //ganti dengan form pelanggan
             l.setLocationRelativeTo(null);
             l.setVisible(true);
         }
