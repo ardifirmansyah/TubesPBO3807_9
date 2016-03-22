@@ -12,7 +12,7 @@ package aplikasipeminjamanbarang;
 public class Launcher extends javax.swing.JFrame {
 
     /**
-     * Creates new form part1
+     * Creates new form LoginPelanggan
      */
     public Launcher() {
         initComponents();
@@ -27,83 +27,126 @@ public class Launcher extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        usernameLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
+        passwordTxt = new javax.swing.JPasswordField();
+        usernameTxt = new javax.swing.JTextField();
         title = new javax.swing.JLabel();
-        btnPetugas = new javax.swing.JButton();
-        btnPelanggan = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        loginBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Aplikasi Peminjaman Barang");
+
+        usernameLabel.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
+        usernameLabel.setText("Username");
+
+        passwordLabel.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
+        passwordLabel.setText("Password");
+
+        passwordTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordTxtActionPerformed(evt);
+            }
+        });
+
+        usernameTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTxtActionPerformed(evt);
+            }
+        });
 
         title.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
-        title.setText("APLIKASI PEMINJAMAN BARANG");
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("Masukkan Data Login");
 
-        btnPetugas.setText("PETUGAS");
-        btnPetugas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPetugasActionPerformed(evt);
+        loginBtn.setText("Login");
+        loginBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginBtnMouseClicked(evt);
             }
         });
-
-        btnPelanggan.setText("PELANGGAN");
-        btnPelanggan.addActionListener(new java.awt.event.ActionListener() {
+        loginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPelangganActionPerformed(evt);
+                loginBtnActionPerformed(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
-        jLabel1.setText("Pilih masuk sebagai :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(title)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnPetugas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPelanggan)))
-                .addGap(76, 76, 76))
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(jLabel1)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(94, 94, 94)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(loginBtn)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(passwordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(usernameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(usernameTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                                .addComponent(passwordTxt)))))
+                .addGap(0, 94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(47, 47, 47)
                 .addComponent(title)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(24, 24, 24)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPetugas)
-                    .addComponent(btnPelanggan))
-                .addGap(105, 105, 105))
+                    .addComponent(usernameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(passwordLabel)
+                    .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(loginBtn)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPetugasActionPerformed
+    private void passwordTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTxtActionPerformed
         // TODO add your handling code here:
-        LoginPetugas formLoginPetugas = new LoginPetugas();
-        formLoginPetugas.setLocationRelativeTo(this);
-        formLoginPetugas.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnPetugasActionPerformed
+    }//GEN-LAST:event_passwordTxtActionPerformed
 
-    private void btnPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPelangganActionPerformed
+    private void usernameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTxtActionPerformed
         // TODO add your handling code here:
-        LoginPelanggan formLoginPelanggan = new LoginPelanggan();
-        formLoginPelanggan.setLocationRelativeTo(this);
-        formLoginPelanggan.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnPelangganActionPerformed
+    }//GEN-LAST:event_usernameTxtActionPerformed
+
+    private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginBtnMouseClicked
+
+    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
+        // TODO add your handling code here:
+        /*String username = "pelanggan";
+        String password = "pelanggan";
+        */
+        if ("admin".equals(usernameTxt.getText())) {
+            if ("admin".equals(passwordTxt.getText())) {
+                this.setVisible(false);
+                FormPetugas p = new FormPetugas();    //ganti dengan form pelanggan
+                p.setLocationRelativeTo(null);
+                p.setVisible(true);
+            }
+            else {
+                javax.swing.JOptionPane.showMessageDialog(null, "Maaf password anda salah.");
+                passwordTxt.setText("");
+                passwordTxt.requestFocus();
+            }
+            
+        }
+        else {
+            
+        }
+    }//GEN-LAST:event_loginBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,9 +185,11 @@ public class Launcher extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnPelanggan;
-    private javax.swing.JButton btnPetugas;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton loginBtn;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JPasswordField passwordTxt;
     private javax.swing.JLabel title;
+    private javax.swing.JLabel usernameLabel;
+    private javax.swing.JTextField usernameTxt;
     // End of variables declaration//GEN-END:variables
 }
