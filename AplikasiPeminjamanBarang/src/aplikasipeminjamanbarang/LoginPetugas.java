@@ -133,9 +133,9 @@ public class LoginPetugas extends javax.swing.JFrame {
         
         if (username.equals(usernameTxt.getText()) && password.equals(passwordTxt.getText())) {
             this.setVisible(false);
-            Launcher l = new Launcher();    //ganti dengan form admin
-            l.setLocationRelativeTo(null);
-            l.setVisible(true);
+            FormPetugas p = new FormPetugas();    //ganti dengan form admin
+            p.setLocationRelativeTo(null);
+            p.setVisible(true);
         }
         else {
             javax.swing.JOptionPane.showMessageDialog(null, "Maaf user atau password anda salah.");
